@@ -9,7 +9,7 @@ let unitPriceHidden = document.querySelectorAll('.unit-price-hidden');
 
 let counter = (sessionStorage.getItem("items") != 0)? sessionStorage.getItem("items"): 0;
 let basket = document.querySelectorAll(".header__account--item span")[1];
-basket.innerText = `${sessionStorage.getItem("items")} Items`;
+basket.innerText = (sessionStorage.getItem("items")=== null)? `0 Items` : `${sessionStorage.getItem("items")} Items`;
 
 sessionStorage.setItem("item-list",(sessionStorage.getItem("item-list") === null)? JSON.stringify([0,0]): sessionStorage.getItem("item-list"));
 
