@@ -188,6 +188,10 @@ input[type="radio"] {
   .color-option span.white:after {
     background: #d6d6d6;
   }
+
+  .color-option span.brown:after {
+    background: #D4A9A5;
+  }
   
   .color-option input[type="radio"]:checked ~ .pink {
     border: 2px solid #E14491;
@@ -200,6 +204,10 @@ input[type="radio"] {
   }
   .color-option input[type="radio"]:checked ~ .white {
     border: 2px solid #d6d6d6;
+  }
+
+  .color-option input[type="radio"]:checked ~ .brown {
+    border: 2px solid #D4A9A5;
   }
  
 .sizing{

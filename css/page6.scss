@@ -265,6 +265,10 @@
             display:flex;
             gap:.5rem;
             align-items: center;
+            a{
+                text-decoration: none;
+                color:black;
+            }
             small{
                 font-weight:100;
             }
