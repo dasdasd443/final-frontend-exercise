@@ -138,7 +138,7 @@ input[type=radio] {
 }
 
 .color-option span.pink:after {
-  background: #fa76e4;
+  background: #E14491;
 }
 
 .color-option span.red:after {
@@ -154,7 +154,7 @@ input[type=radio] {
 }
 
 .color-option input[type=radio]:checked ~ .pink {
-  border: 2px solid #fa76e4;
+  border: 2px solid #E14491;
 }
 
 .color-option input[type=radio]:checked ~ .red {

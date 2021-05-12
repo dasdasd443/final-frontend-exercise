@@ -25,3 +25,17 @@ heart.addEventListener("click",()=>{
     }
     
 });
+
+let quantity = document.querySelector(".numOrder--value");
+let value = document.querySelector(".numOrder--value__input");
+document.querySelector(".numOrder--sub").addEventListener("click", ()=>{
+    if(value.value > 0){
+        value.value--;
+        quantity.innerText = value.value;
+    }
+});
+
+document.querySelector(".numOrder--add").addEventListener("click", ()=>{
+    value.value++;
+    quantity.innerText = value.value;
+});
