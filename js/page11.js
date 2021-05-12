@@ -9,7 +9,9 @@ let unitPriceHidden = document.querySelectorAll('.unit-price-hidden');
 
 let counter = (sessionStorage.getItem("items") != 0)? sessionStorage.getItem("items"): 0;
 let basket = document.querySelectorAll(".header__account--item span")[1];
+let totalPriceText = document.querySelector(".header__account--item small");
 basket.innerText = (sessionStorage.getItem("items")=== null)? `0 Items` : `${sessionStorage.getItem("items")} Items`;
+totalPriceText.innerText = (sessionStorage.getItem("total")=== null)? `$0.00` : `$${sessionStorage.getItem("total")}.00`;
 
 sessionStorage.setItem("item-list",(sessionStorage.getItem("item-list") === null)? JSON.stringify([0,0]): sessionStorage.getItem("item-list"));
 
@@ -34,6 +36,8 @@ function calculateTotal(){
     });
     subtotal.innerText = `$${subtotalVal}`;
     totalPrice.innerText = `$${subtotalVal + 20}`;
+    sessionStorage.setItem("total",subtotalVal + 20);
+    totalPriceText.innerText = (sessionStorage.getItem("total")=== null)? `$0.00` : `$${sessionStorage.getItem("total")}.00`;
 }
 
 upQuantity.forEach((elem, index) => {
