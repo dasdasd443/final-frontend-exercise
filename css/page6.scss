@@ -16,6 +16,7 @@
 }
 .container{
     width: 70vw;
+    max-width: 1344px;
     // border: 1px solid red;
     margin: 0 auto;
 
@@ -124,10 +125,10 @@
 
     &-fb{
         margin-right: 40px;
-        color: blue;
+        color: #385c8e;
     }
     &-twit{
-        color: #33A0FF;
+        color: #03a9f4;
     }
 }
 .foot-sec1-rakuinfo{
@@ -135,7 +136,7 @@
     width: 30%;
 
     &-h3{
-        color:lightgray ;
+        color:#bdbdbd;
         font-weight: bolder;
     }
     &-p{
@@ -238,12 +239,16 @@
 }
 .foot-sec3{
     margin: 20px 0 20px auto;
-    display: block;
-    width: 212px;
+    display: flex;
+    justify-content: space-between;
 
-    img{
-        margin-left: 10px;
+    &-copyright{
+        color: #d9dee1;
     }
+   &-paymentIcon{
+    gap: 20px;
+    display: flex;
+   }
 }
 .header{
     display:flex;
@@ -358,13 +363,12 @@
     margin: 0 auto;
 
     &--box{
-            width: 240px;
-            height: 280px;
+            // width: 240px;
             border: 1px solid lightgray;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px 0;
+            padding: 20px 20px;
 
             
     &--image{
@@ -407,7 +411,8 @@
     }
     &--stars{
         display: flex;
-        color: yellow;
+        color: #fec73d;
+        font-size: 10pt;
 
         &--last{
             color: lightgray;
@@ -419,7 +424,7 @@
         margin: 20px 0;
         width: 85px;
         &--enabled{
-            color: red;
+            color: #f74657;
         }
         &--disabled{
             color: lightgray;
@@ -479,7 +484,7 @@
         text-align: center;
 
         &--i{
-            color: #FD2E2E;
+            color: #f76774;
             font-size: 30pt;
         }
         &--h3{
@@ -510,6 +515,10 @@
     width: 330px;
     height: 126px;
 
+     
+       &--featured3Img{
+        margin-left: -26px;
+       }    
        &--content{
         margin: 24px 10px;
 
@@ -544,10 +553,16 @@
         }
     }
     &--butn{
-        background-color:#33A0FF;
+        background-color:#2e90e5;
         color: white;
         border: none;
+        font-weight: bold;
+        letter-spacing: 1px;
         border-radius: 3px;
         padding: 25px 40px;
+
+        &:focus{
+            outline: none;
+        }
     }
 }

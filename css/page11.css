@@ -1,83 +1,130 @@
 .navigation {
   height: 5vh;
   background-color: #F6F7F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 0 15vh 0;
 }
+
 .navigation__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .navigation__links a {
   color: #33A0FF;
   font-size: 14px;
   text-decoration: none;
 }
+
 .navigation__links > * {
   font-weight: 600;
   padding-right: 15px;
 }
 
 .page11 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 7rem;
   margin-bottom: 20vh;
 }
+
 .page11 .items-list__header, .page11 .items-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 4rem;
 }
+
 .page11 .items-list__header {
   height: 10vh;
   place-items: center;
 }
+
 .page11 .items-list__header h1 {
   text-transform: uppercase;
   font-weight: bold;
-  flex: 2;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   font-size: 18px;
 }
+
 .page11 .items-list__header h1:nth-child(1) {
-  flex: 6;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
 }
+
 .page11 .items-list__item {
   height: 30vh;
   place-items: center;
 }
+
 .page11 .items-list__item--name {
-  flex: 6;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2rem;
   place-items: center;
 }
+
 .page11 .items-list__item--name h1 {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.6;
 }
+
 .page11 .items-list__item--name .image-container {
   height: 100px;
   width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .page11 .items-list__item--name .image-container img {
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+
 .page11 .items-list__item--name__delete {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   place-items: center;
 }
+
 .page11 .items-list__item--name__delete i {
   position: relative;
   color: #FF4252;
   left: 5px;
 }
+
 .page11 .items-list__item--name__delete .background {
   position: absolute;
   background-color: #FF6875;
@@ -87,14 +134,21 @@
   opacity: 5%;
   border-radius: 23px;
 }
+
 .page11 .items-list__item h1, .page11 .items-list__item--quantity {
-  flex: 2;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   font-size: 16px;
 }
+
 .page11 .items-list__item--quantity form {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .page11 .items-list__item--quantity form input[type=number], .page11 .items-list__item--quantity form input[type=number]:focus {
   outline: none;
   border: none;
@@ -103,65 +157,105 @@
   text-align: center;
   width: 50px;
 }
+
 .page11 .items-list__item--quantity form input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
+
 .page11 .items-list__item--quantity form button {
   width: 50px;
   background-color: #F6F7F8;
   border: none;
   outline: none;
 }
+
 .page11 .items-list__item--quantity form button i {
   color: #33A0FF;
 }
 
 .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .total .voucher {
-  flex: 8;
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
 }
+
 .total .voucher form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .total .voucher form input[type=text], .total .voucher form button {
   border-radius: 0;
   border: 1px solid #F1F3F4;
 }
+
 .total .voucher form input[type=text] {
   padding: 15px 80px 15px 15px;
 }
+
 .total .voucher form input[type=text]:focus {
   outline: none;
 }
+
 .total .voucher form button {
   padding: 20px 40px;
   background-color: #33A0FF;
   font-size: 14px;
   color: white;
 }
+
 .total .checkout {
-  flex: 4;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 2rem;
 }
+
 .total .checkout-container__price-list {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 2rem;
 }
+
 .total .checkout-container__price-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .total .checkout-container__total {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 30px;
 }
+
 .total .checkout button {
   font-size: 16px;
   padding: 20px;
@@ -169,5 +263,4 @@
   background-color: #33A0FF;
   border: none;
 }
-
 /*# sourceMappingURL=page11.css.map */
