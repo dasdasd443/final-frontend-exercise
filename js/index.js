@@ -11,3 +11,6 @@ title.addEventListener("click",()=>{
 popupCloseBtn.addEventListener("click", ()=>{
     document.querySelector('.newsletter').style.display = "none";
 });
+
+let basket = document.querySelectorAll(".header__account--item span")[1];
+basket.innerText = `${sessionStorage.getItem("items")} Items`;
