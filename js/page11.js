@@ -11,6 +11,20 @@ let counter = (sessionStorage.getItem("items") != 0)? sessionStorage.getItem("it
 let basket = document.querySelectorAll(".header__account--item span")[1];
 basket.innerText = `${sessionStorage.getItem("items")} Items`;
 
+sessionStorage.setItem("item-list",(sessionStorage.getItem("item-list") === null)? JSON.stringify([0,0]): sessionStorage.getItem("item-list"));
+
+let itemList = (sessionStorage.getItem("item-list") != null)? sessionStorage.getItem("item-list"): 0;
+itemList = JSON.parse(itemList);
+
+itemList.forEach((elem,index) => {
+    quantityInput[index].value = elem;
+    unitPriceHidden[index].value = quantityInput[index].value * price[index].value;
+    unitPrice[index].innerText = `$${quantityInput[index].value * price[index].value}`;
+    calculateTotal();
+});
+
+
+
 function calculateTotal(){
     let subtotal = document.querySelector('.sub-total');
     let totalPrice = document.querySelector('.total-price');
@@ -32,19 +46,27 @@ upQuantity.forEach((elem, index) => {
         counter++;
         sessionStorage.setItem("items",counter);
         basket.innerText = `${sessionStorage.getItem("items")} Items`;
+        itemList[index]+=1;
+        sessionStorage.setItem("item-list",JSON.stringify(itemList));
     });
 });
 
 downQuantity.forEach((elem, index) => {
     elem.addEventListener("click", (e)=>{
         e.preventDefault();
-        if(quantityInput[index].value > 0)
+        if(quantityInput[index].value > 0){
             quantityInput[index].value--;
-            unitPrice[index].innerText = `$${(quantityInput[index].value * price[index].value)}`; 
+            unitPrice[index].innerText = `$${(quantityInput[index].value * price[index].value)}`;
+            unitPriceHidden[index].value = (quantityInput[index].value * price[index].value); 
             calculateTotal();
             counter--;
             sessionStorage.setItem("items",counter);
             basket.innerText = `${sessionStorage.getItem("items")} Items`;
+            itemList[index]-=1;
+            sessionStorage.setItem("item-list",JSON.stringify(itemList));
+            
+        }
+            
     });
 });
 
