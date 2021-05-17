@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/page6.css">
+    <link rel="stylesheet" href="css/page7.css">
+    <link rel="stylesheet" href="css/page9.css">
+    <link rel="stylesheet" href="css/page10.css">
+    <link rel="stylesheet" href="css/page11.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Checkout</title>
+</head>
+<body>
+    
+    <div class="container">
+        <section class="header">
+            <section class="header__lang">
+                <section class="header__lang--item">
+                    <span>EN</span>
+                    <select name="" id=""></select>
+                </section>
+                <section class="header__lang--item">
+                    <span>USD</span>
+                    <select name="" id=""></select>
+                </section>
+            </section>
+            <section class="header__account">
+                <section class="header__account--item">
+                    <i class="far fa-user"></i><span>My profile</span>
+                </section>
+                <section class="header__account--item">
+                    <a href="page11.html"><i class="fas fa-shopping-basket"></i>
+                        <span>0 Items</span>
+                        <small>$0.00</small>
+                    </a>
+                </section>
+                <section class="header__account--item">
+                    <i class="fas fa-search"></i>
+                </section>
+            </section>
+        </section>
+        <span class="line-title"></span>
+        <section class="title">
+            <h1>Raku</h1>
+            <h1>tech</h1>
+        </section>
+        <section class="links">
+            <nav class="links__nav">
+                <ul class="links__nav--links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Store</a></li>
+                    <li><a href="page9.html">Iphone</a></li>
+                    <li><a href="">ipad</a></li>
+                    <li><a href="">macbook</a></li>
+                    <li><a href="page10.html">accessories</a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+
+    <section class="navigation">
+        <section class="navigation__links">
+            <a href="">Home</a>
+            <span>/</span>
+            <a href="">Accessories</a>
+            <span>/</span>
+            <span>Beat Solo2 on Ear Headphones-Black</span>
+        </section>
+    </section>
+    <div class="container page11">
+        <div class="container items-list">
+            <section class="items-list__header">
+                <h1>Product</h1>
+                <h1>Price</h1>
+                <h1>QTY</h1>
+                <h1>Unit Price</h1>
+            </section>
+            <hr/>
+            <section class="items-list__item">
+                <section class="items-list__item--name">
+                    <section class="items-list__item--name__delete">
+                        <i class="fas fa-times"></i>
+                        <span class='background'></span>
+                    </section>
+                    <section class="image-container">
+                        <img src="assets/Rectangle 5.png" alt="">
+                    </section>
+                    <h1>Philips Hue 7W BR30 Connected Downlight Lamp</h1>
+                </section>
+                <h1>$449</h1>
+                <input type="hidden" class='price' value="499">
+                <section class="items-list__item--quantity">
+                    <form action="">
+                        <button class='minus-quantity'><i class='fa fa-minus'></i></button>
+                        <input type="number" name="quantity" class="quantity" min="0" value="0">
+                        <button class='add-quantity'><i class='fa fa-plus'></i></button>
+                    </form>
+                </section>
+                <input type="hidden" name="" value="0" class="unit-price-hidden">
+                <h1 class='unit-price'>$0</h1>
+            </section>
+            <hr/>
+            <section class="items-list__item">
+                <section class="items-list__item--name">
+                    <section class="items-list__item--name__delete">
+                        <i class="fas fa-times"></i>
+                        <span class='background'></span>
+                    </section>
+                    <section class="image-container">
+                        <img src="assets/50061505_575246.png" alt="">
+                    </section>
+                    <h1>Apple Macbook Pro</h1>
+                </section>
+                <h1>$449</h1>
+                <input type="hidden" class='price' value="499">
+                <section class="items-list__item--quantity">
+                    <form action="">
+                        <button class='minus-quantity'><i class='fa fa-minus'></i></button>
+                            <input type="number" name="quantity" class="quantity" min="0" value="0">
+                        <button class='add-quantity'><i class='fa fa-plus'></i></button>
+                    </form>
+                </section>
+                <input type="hidden" name="" value="0" class="unit-price-hidden">
+                <h1 class='unit-price'>$0</h1>
+            </section>
+            <hr>
+        </div>
+
+        <div class="container total">
+            <section class="voucher">
+                <form action="">
+                    <input type="text" name="" placeholder="Voucher Code" id="voucher-code">
+                    <button>Redeem</button>
+                </form>
+            </section>
+            <form action="" class="checkout">
+                <section class="checkout-container">
+                    <ul class="checkout-container__price-list">
+                        <li><span>Subtotal</span><span class='sub-total'>$0</span></li>
+                        <li><span>Shipping fee</span><span>$20</span></li>
+                        <li><span>Coupon</span><span>No</span></li>
+                    </ul>
+                </section>
+                <hr>
+                <section class="checkout-container__total">
+                    <h1>Total</h1>
+                    <h1 class="total-price">$20</h1>
+                </section>
+                <button>Checkout</button>
+            </form>
+        </div>
+    </div>
+  
+    <footer class="foot">
+        <hr>
+        <div class="container">
+        <section class="foot-sec1">
+            <div class="foot-sec1-rakuinfo">
+                <h3 class="foot-sec1-rakuinfo-h3">RAKUTECH</h3>
+                <p class="foot-sec1-rakuinfo-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolore et voluptatum natus provident explicabo inventore,
+                    incidunt sapiente temporibus eius atque! Corporis excepturi
+                    nihil minima mollitia! Eveniet pariatur vitae ipsum earum!</p>
+            </div>
+            <div class="foot-sec1-follow">
+                <h5 class="foot-sec1-follow-h5">Follow Us</h5>
+                <p class="foot-sec1-follow-p">Since the 1500s, when an unknown printer took a gallery of type and scrambled.</p>
+                <div class="foot-sec1-fticons">
+                    <i class="fab fa-facebook-f foot-sec1-fticons-fb"></i>
+                    <i class="fab fa-twitter foot-sec1-fticons-twit"></i>
+                </div>
+            </div>
+            <div class="foot-sec1-contact">
+                <h5 class="foot-sec1-contact-h5">Contact Us</h5>
+                <p class="foot-sec1-contact-p">My company, 4578 Marmora Road, Glasgow
+                   <span>D04 89GR</span> 
+                   <span> Call us now: 0123-456-789</span>
+                   <span>Email:support@whatever.com</span> 
+                </p>
+            </div>
+        </section>
+        <hr>
+    </div>
+        <div class="container">
+        <section class="foot-sec2">
+            <div class="foot-sec2-information">
+                <h5>Information</h5>
+                <p>About Us</p>
+                <p>Information</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <div class="foot-sec2-services">
+                <h5>Services</h5>
+                <p>About Us</p>
+                <p>Information</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <div class="foot-sec2-extras">
+                <h5>Extras</h5>
+                <p>About Us</p>
+                <p>Information</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <div class="foot-sec2-myaccount">
+                <h5>My Account</h5>
+                <p>About Us</p>
+                <p>Information</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <div class="foot-sec2-usefullinks">
+                <h5>Useful Links</h5>
+                <p>About Us</p>
+                <p>Information</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <div class="foot-sec2-ouroffers">
+                <h5>Our Offers</h5>
+                <p>About Us</p>
+                <p>Information</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>  
+        </section>
+    </div>
+        <hr>
+        <div class="container">
+        <section class="foot-sec3">
+        <span class="foot-sec3-copyright">© 2018 Ecommerce theme by www.bisenbaev.com</span>
+        <figure class="foot-sec3-paymentIcon">
+        <img src="Frontend-final-exercise/Western-union.png" alt="">
+        <img src="Frontend-final-exercise/Group 19.png" alt="">
+        <img src="Frontend-final-exercise/Paypal.png" alt="">
+        <img src="Frontend-final-exercise/visa.jpg" alt="">
+        </figure>
+        </section>
+        </div>  
+    </footer>
+    <script src="js/page11.js"></script>
+</body>
+</html>

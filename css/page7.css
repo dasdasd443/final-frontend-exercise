@@ -1,16 +1,17 @@
 @font-face {
-  font-family: "Proxima Nova Rg";
-  src: url("/fonts/proxima/ProximaNova-Regular.woff2") format("woff2"), url("/fonts/proxima/ProximaNova-Regular.woff") format("woff");
+  font-family: 'Proxima Nova Rg';
+  src: url("../fonts/proxima/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/proxima/ProximaNova-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Proxima Nova Rg";
+  font-family: 'Proxima Nova Rg';
   font-weight: normal;
   font-style: normal;
 }
@@ -34,6 +35,7 @@
           align-items: center;
   font-size: 14px;
 }
+
 .header__account {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,27 +46,32 @@
   gap: 1rem;
   font-weight: 600;
 }
+
 .header__account--item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
+  gap: .5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+
 .header__account--item small {
   font-weight: 100;
 }
+
 .header__account--item:nth-child(3) {
   margin: 0 0 0 30px;
 }
+
 .header__lang {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1rem;
 }
+
 .header__lang select, .header__lang select:active {
   border: none;
 }
@@ -81,11 +88,13 @@
           align-items: center;
   height: 20vh;
 }
+
 .title h1 {
   font-size: 32px;
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .title h1:nth-child(2) {
   color: #FD2E2E;
 }
@@ -93,6 +102,7 @@
 .links {
   margin: 0 0 10vh 0;
 }
+
 .links__nav--links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,16 +112,19 @@
           justify-content: center;
   gap: 4rem;
 }
+
 .links__nav--links li {
   list-style-type: none;
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 14px;
 }
+
 .links__nav--links li a {
   color: black;
   text-decoration: none;
 }
+
 .links__nav--links li a:hover, .links__nav--links li a:active {
   color: #33A0FF;
 }
@@ -124,6 +137,7 @@
   position: relative;
   margin: 0 0 40vh 0;
 }
+
 .banner__flag {
   position: relative;
   height: 100%;
@@ -140,14 +154,17 @@
           align-items: center;
   gap: 1rem;
 }
+
 .banner__flag .flag__text, .banner__flag .flag__pic {
   color: white;
 }
+
 .banner__flag i {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
 }
+
 .banner__flag i:nth-child(4) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,6 +173,7 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+
 .banner__flag .flag__text {
   -webkit-box-flex: 4;
       -ms-flex: 4;
@@ -170,32 +188,39 @@
   gap: 4rem;
   width: 100%;
 }
+
 .banner__flag .flag__text h1 {
   font-size: 36px;
   font-weight: bold;
 }
+
 .banner__flag .flag__text span {
   font-size: 14px;
   line-height: 1.5rem;
 }
+
 .banner__flag .flag__text a {
   text-decoration: none;
   color: white;
   width: 45px;
   padding-bottom: 5px;
 }
+
 .banner__flag .flag__text a:hover {
   margin-bottom: -3px;
   border-bottom: 3px solid white;
 }
+
 .banner__flag .flag__pic {
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
 }
+
 .banner__flag .flag__pic img {
   width: 40vw;
 }
+
 .banner__mini {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,13 +232,16 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+
 .banner__mini h1 {
   font-size: 24px;
 }
+
 .banner__mini span {
   font-size: 12px;
   line-height: 1.5rem;
 }
+
 .banner__mini .item-1, .banner__mini .item-2, .banner__mini .item-3 {
   -webkit-box-flex: 4;
       -ms-flex: 4;
@@ -222,6 +250,7 @@
   height: 280px;
   width: 390px;
 }
+
 .banner__mini .item-1 {
   background-color: #FF6875;
   color: white;
@@ -230,6 +259,7 @@
   display: -ms-flexbox;
   display: flex;
 }
+
 .banner__mini .item-1__text {
   position: absolute;
   display: -webkit-box;
@@ -241,12 +271,15 @@
           flex-direction: column;
   gap: 2rem;
 }
+
 .banner__mini .item-1__text span {
   width: 70%;
 }
+
 .banner__mini .item-1__text h1:nth-child(3) {
   opacity: 75%;
 }
+
 .banner__mini .item-1__pic img {
   position: relative;
   -o-object-fit: cover;
@@ -255,20 +288,24 @@
   max-height: 538px;
   right: -40px;
 }
+
 .banner__mini .item-2 {
   position: relative;
   background-color: #F6F7F8;
 }
+
 .banner__mini .item-2__pic {
   position: absolute;
   top: -50px;
 }
+
 .banner__mini .item-2__pic img {
   -o-object-fit: cover;
      object-fit: cover;
   max-height: 322px;
   max-width: 322px;
 }
+
 .banner__mini .item-2__text {
   position: relative;
   bottom: -200px;
@@ -279,6 +316,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .banner__mini .item-3 {
   background-color: #C1C8CE;
   display: -webkit-box;
@@ -286,6 +324,7 @@
   display: flex;
   gap: 2rem;
 }
+
 .banner__mini .item-3__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,6 +336,7 @@
   gap: 2rem;
   width: 50%;
 }
+
 .banner__mini .item-3__pic {
   position: absolute;
   width: 200px;
@@ -317,6 +357,7 @@
   margin: 10vh 0;
   color: white;
 }
+
 .banner-2__flag {
   width: 70vw;
   display: -webkit-box;
@@ -330,6 +371,7 @@
           align-items: center;
   gap: 3rem;
 }
+
 .banner-2__flag__text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -341,30 +383,36 @@
   gap: 4rem;
   width: 40%;
 }
+
 .banner-2__flag__text span {
   font-size: 66px;
   font-weight: 100;
   line-height: 1.6;
 }
+
 .banner-2__flag__text span:nth-child(2) {
   font-size: 24px;
 }
+
 .banner-2__flag__text a {
   color: white;
   text-decoration: none;
   width: 90px;
   padding-bottom: 10px;
 }
+
 .banner-2__flag__text a:hover {
   margin-bottom: -3px;
   border-bottom: 3px solid white;
 }
+
 .banner-2__flag__pic {
   overflow: hidden;
   height: 630px;
   position: relative;
   top: -15px;
 }
+
 .banner-2__flag__pic img {
   height: 709px;
   -o-object-fit: cover;
@@ -376,4 +424,5 @@
     padding: 0 0 0 20px;
     width: 100vw;
   }
-}/*# sourceMappingURL=page7.css.map */
+}
+/*# sourceMappingURL=page7.css.map */

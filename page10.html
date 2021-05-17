@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/page6.css">
-    <link rel="stylesheet" href="/css/page7.css">
-    <link rel="stylesheet" href="/css/page9.css">
-    <link rel="stylesheet" href="/css/page10.css">
+    <link rel="stylesheet" href="css/page6.css">
+    <link rel="stylesheet" href="css/page7.css">
+    <link rel="stylesheet" href="css/page9.css">
+    <link rel="stylesheet" href="css/page10.css">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title>Page 10</title>
+    <title>Product Details</title>
 </head>
 <body>
-    
     <div class="container">
         <section class="header">
             <section class="header__lang">
@@ -30,9 +29,10 @@
                     <i class="far fa-user"></i><span>My profile</span>
                 </section>
                 <section class="header__account--item">
-                    <i class="fas fa-shopping-basket"></i>
-                    <span>0 Items</span>
-                    <small>$0.00</small>
+                    <a href="page11.html"><i class="fas fa-shopping-basket"></i>
+                        <span>0 Items</span>
+                        <small>$0.00</small>
+                    </a>
                 </section>
                 <section class="header__account--item">
                     <i class="fas fa-search"></i>
@@ -47,24 +47,23 @@
         <section class="links">
             <nav class="links__nav">
                 <ul class="links__nav--links">
-                    <li><a href="">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="">Store</a></li>
-                    <li><a href="">Iphone</a></li>
+                    <li><a href="page9.html">Iphone</a></li>
                     <li><a href="">ipad</a></li>
                     <li><a href="">macbook</a></li>
-                    <li><a href="">accessories</a></li>
+                    <li><a href="page10.html">accessories</a></li>
                 </ul>
             </nav>
         </section>
     </div>
-
     <section class="navigation">
         <section class="navigation__links">
             <a href="">Home</a>
             <span>/</span>
             <a href="">Accessories</a>
             <span>/</span>
-            <span>Beat Solo2 on Ear Headphones-Black</span>
+            <span>Beat Solo2 on Ear Headphones - Black</span>
         </section>
     </section>
 
@@ -76,17 +75,17 @@
                     <div class="items-left-details">
                         <div class="items-left-details--productImages">
                             <figure class="items-left-details--productImages--largeView">
-                                <img src="/Frontend-final-exercise/rec (1).jpg" alt="">
+                                <img src="Frontend-final-exercise/black_hero_retina_1800x1800_V2.png" alt="">
                             </figure>
                             <div class="items-left-details--productImages--listImages">
-                                <figure class="items-left-details--productImages--listImages--small"><img src="/Frontend-final-exercise/_0053_rgb_MP582-RGB-bttm_V2.png" alt=""></figure>
-                                <figure class="items-left-details--productImages--listImages--small"><img src="/Frontend-final-exercise/_0066_rgb_MNEN2-RGB-side_V2.png" alt=""></figure>
-                                <figure class="items-left-details--productImages--listImages--small"><img src="/Frontend-final-exercise/Rectangle 5.png" alt=""></figure>
-                                <figure class="items-left-details--productImages--listImages--small"><img src="/Frontend-final-exercise/151101_bbd_sodc_blk_06.png" alt=""></figure>
+                                <figure class="items-left-details--productImages--listImages--small"><img src="assets/0053_rgb_MP582-RGB-bttm_V2.png" alt=""></figure>
+                                <figure class="items-left-details--productImages--listImages--small"><img src="assets/0066_rgb_MNEN2-RGB-side_V2.png" alt=""></figure>
+                                <figure class="items-left-details--productImages--listImages--small"><img src="assets/Rectangle 5.png" alt=""></figure>
+                                <figure class="items-left-details--productImages--listImages--small"><img src="assets/151101_bbd_sodc_blk_06.png" alt=""></figure>
                             </div>
                         </div>
                         <div class="items-left-details-productDetails">
-                            <h2 class="items-left-details-h2">Beats on Solo2 On Ear Headphones-Black</h2>
+                            <h2 class="items-left-details-h2">Beats on Solo2 On Ear Headphones - Black</h2>
 
                             <div class="items-left-details-productDetails-reviewDetails">
                                 <div class="items-left-details-productDetails-reviewDetails--str">
@@ -119,7 +118,7 @@
                                 <label for="" class="color-label">Select Color :</label> 
                                 <label class="color-option">
                                     <input name="color" type="radio" class="color-radio">
-                                    <span class="blue"></span>
+                                    <span class="pink"></span>
                                   </label>
                                   
                                   <label class="color-option">
@@ -134,7 +133,12 @@
 
                                   <label class="color-option">
                                     <input name="color" type="radio" class="color-radio">
-                                    <span class="yellow"></span>
+                                    <span class="white"></span>
+                                  </label>
+
+                                  <label class="color-option">
+                                    <input name="color" type="radio" class="color-radio">
+                                    <span class="brown"></span>
                                   </label>
                             </div>
 
@@ -150,7 +154,8 @@
                             <div class="bottomOptions">
                                 <div class="numOrder">
                                 <button class="numOrder--sub"><i class="fas fa-minus"></i></button>
-                                <span class="numOrder--value">2</span>
+                                <span class="numOrder--value">0</span>
+                                <input class="numOrder--value__input" type="hidden" value="0">
                                 <button class="numOrder--add"><i class="fas fa-plus"></i></button>
                                 </div>
                                 <div class="buttonCartheart">
@@ -170,10 +175,10 @@
                     <div class="productInformation">
                         <div class="productInformation-menu">
                             <a href="">Product Information</a>
-                            <a href="">Reviews 0</a>
+                            <a href="">Reviews <span>0</span></a>
                             <a href="">Another tab</a>
                         </div>
-                        <hr>
+                        <hr class="productInformation--hr">
                         <p class="productInformation-p">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sit nesciunt sapiente ipsum laudantium in deleniti ipsam omnis, doloribus, hic veritatis magni temporibus quos, sed possimus fuga distinctio laboriosam maxime.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque unde tempore hic sed cupiditate, natus placeat fuga porro corrupti reprehenderit veniam praesentium pariatur impedit neque dicta sint. Sunt, qui asperiores!
@@ -187,9 +192,13 @@
                 <section class="items-right">
                     <div class="items-right-bestSeller">
                         <h4 class="items-right-bestSeller-h4">BEST SELLER</h4>
-                        <div class="bs-category-gallery--one--box  items-right-bestSeller-box">
-                            <div class="bs-category-gallery--one--box--image items-right-bestSeller-box--img">
-                            <img src="/Frontend-final-exercise/50061505_575246.png" alt="" >
+                        <div class="bs-category-gallery--one--box">
+                            <div class="bs-category-gallery--one--box--image">
+                            <img src="Frontend-final-exercise/50061505_575246.png" alt="" >
+                            <div class="bs-category-gallery--one--box--image--overlay">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
                             </div>
                             <h4 class="bs-category-gallery--one--box--h4">Apple Macbook Pro</h4>
                             <div class="bs-category-gallery--one--box--stars">
@@ -216,7 +225,7 @@
                         <p class="items-right-ads--p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <p class="items-right-ads--price">$299</p>
                         <figure>
-                        <img src="/Frontend-final-exercise/50051823_540375.png" alt="">
+                        <img src="Frontend-final-exercise/50051823_540375.png" alt="">
                         </figure>
                     </div>
                 </section>
@@ -226,9 +235,16 @@
             
             <section class="related-products">
                 <h2 class="related-products-title">RELATED PRODUCTS</h2>
+
                 <div class="bs-category-gallery--one">
-                    <div class="bs-category-gallery--one--box">
-                        <img src="/Frontend-final-exercise/50061505_575246.png" alt="" class="bs-category-gallery--one--box--image">
+                    <div class="bs-category-gallery--one--box ">
+                        <div class="bs-category-gallery--one--box--image">
+                        <img src="Frontend-final-exercise/50061505_575246.png" alt="" >
+                        <div class="bs-category-gallery--one--box--image--overlay">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        </div>
                         <h4 class="bs-category-gallery--one--box--h4">Apple Macbook Pro</h4>
                         <div class="bs-category-gallery--one--box--stars">
                             <i class="fas fa-star"></i>
@@ -243,7 +259,13 @@
                         </div>
                     </div>
                     <div class="bs-category-gallery--one--box">
-                        <img src="/Frontend-final-exercise/50061505_575246.png" alt="" class="bs-category-gallery--one--box--image">
+                        <div class="bs-category-gallery--one--box--image">
+                            <img src="Frontend-final-exercise/50061505_575246.png" alt="" >
+                            <div class="bs-category-gallery--one--box--image--overlay">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            </div>
                         <h4 class="bs-category-gallery--one--box--h4">Apple Macbook Pro</h4>
                         <div class="bs-category-gallery--one--box--stars">
                             <i class="fas fa-star"></i>
@@ -258,7 +280,13 @@
                         </div>
                     </div>
                     <div class="bs-category-gallery--one--box">
-                        <img src="/Frontend-final-exercise/50061505_575246.png" alt="" class="bs-category-gallery--one--box--image">
+                        <div class="bs-category-gallery--one--box--image">
+                            <img src="Frontend-final-exercise/50061505_575246.png" alt="" >
+                            <div class="bs-category-gallery--one--box--image--overlay">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            </div>
                         <h4 class="bs-category-gallery--one--box--h4">Apple Macbook Pro</h4>
                         <div class="bs-category-gallery--one--box--stars">
                             <i class="fas fa-star"></i>
@@ -273,7 +301,13 @@
                         </div>
                     </div>
                     <div class="bs-category-gallery--one--box">
-                        <img src="/Frontend-final-exercise/50061505_575246.png" alt="" class="bs-category-gallery--one--box--image">
+                        <div class="bs-category-gallery--one--box--image">
+                            <img src="Frontend-final-exercise/50061505_575246.png" alt="" >
+                            <div class="bs-category-gallery--one--box--image--overlay">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            </div>
                         <h4 class="bs-category-gallery--one--box--h4">Apple Macbook Pro</h4>
                         <div class="bs-category-gallery--one--box--stars">
                             <i class="fas fa-star"></i>
@@ -293,91 +327,102 @@
         </div>
 
 
-  
-    <footer class="foot">
-        <div class="container">
-        <section class="foot-sec1">
-            <div class="foot-sec1-rakuinfo">
-                <h3 class="foot-sec1-rakuinfo-h3">RAKUTECH</h3>
-                <p class="foot-sec1-rakuinfo-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolore et voluptatum natus provident explicabo inventore,
-                    incidunt sapiente temporibus eius atque! Corporis excepturi
-                    nihil minima mollitia! Eveniet pariatur vitae ipsum earum!</p>
-            </div>
-            <div class="foot-sec1-follow">
-                <h5 class="foot-sec1-follow-h5">Follow Us</h5>
-                <p class="foot-sec1-follow-p">Since the 1500s, when an unknown printer took a gallery of type and scrambled.</p>
-                <div class="foot-sec1-fticons">
-                    <i class="fab fa-facebook-f foot-sec1-fticons-fb"></i>
-                    <i class="fab fa-twitter foot-sec1-fticons-twit"></i>
+        <footer class="foot">
+            <hr>
+            <div class="container">
+            <section class="foot-sec1">
+                <div class="foot-sec1-rakuinfo">
+                    <h3 class="foot-sec1-rakuinfo-h3">RAKUTECH</h3>
+                    <p class="foot-sec1-rakuinfo-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolore et voluptatum natus provident explicabo inventore,
+                        incidunt sapiente temporibus eius atque! Corporis excepturi
+                        nihil minima mollitia! Eveniet pariatur vitae ipsum earum!</p>
                 </div>
-            </div>
-            <div class="foot-sec1-contact">
-                <h5 class="foot-sec1-contact-h5">Contact Us</h5>
-                <p class="foot-sec1-contact-p">My company, 4578 Marmora Road, Glasgow
-                   <span>D04 89GR</span> 
-                   <span> Call us now: 0123-456-789</span>
-                   <span>Email:support@whatever.com</span> 
-                </p>
-            </div>
-        </section>
-    </div>
-        <hr>
-        <div class="container">
-        <section class="foot-sec2">
-            <div class="foot-sec2-information">
-                <h5>Information</h5>
-                <p>About Us</p>
-                <p>Information</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
-            </div>
-            <div class="foot-sec2-services">
-                <h5>Services</h5>
-                <p>About Us</p>
-                <p>Information</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
-            </div>
-            <div class="foot-sec2-extras">
-                <h5>Extras</h5>
-                <p>About Us</p>
-                <p>Information</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
-            </div>
-            <div class="foot-sec2-myaccount">
-                <h5>My Account</h5>
-                <p>About Us</p>
-                <p>Information</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
-            </div>
-            <div class="foot-sec2-usefullinks">
-                <h5>Useful Links</h5>
-                <p>About Us</p>
-                <p>Information</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
-            </div>
-            <div class="foot-sec2-ouroffers">
-                <h5>Our Offers</h5>
-                <p>About Us</p>
-                <p>Information</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
-            </div>
-        </section>
-        <section class="foot-sec3">
-            <img src="/Frontend-final-exercise/Western-union.png" alt="">
-        <img src="/Frontend-final-exercise/Group 19.png" alt="">
-        <img src="/Frontend-final-exercise/Paypal.png" alt="">
-        <img src="/Frontend-final-exercise/visa.jpg" alt="">
-        </section>
+                <div class="foot-sec1-follow">
+                    <h5 class="foot-sec1-follow-h5">Follow Us</h5>
+                    <p class="foot-sec1-follow-p">Since the 1500s, when an unknown printer took a gallery of type and scrambled.</p>
+                    <div class="foot-sec1-fticons">
+                        <i class="fab fa-facebook-f foot-sec1-fticons-fb"></i>
+                        <i class="fab fa-twitter foot-sec1-fticons-twit"></i>
+                    </div>
+                </div>
+                <div class="foot-sec1-contact">
+                    <h5 class="foot-sec1-contact-h5">Contact Us</h5>
+                    <p class="foot-sec1-contact-p">My company, 4578 Marmora Road, Glasgow
+                       <span>D04 89GR</span> 
+                       <span> Call us now: 0123-456-789</span>
+                       <span>Email:support@whatever.com</span> 
+                    </p>
+                </div>
+            </section>
+            <hr>
         </div>
-    </footer>
+            <div class="container">
+            <section class="foot-sec2">
+                <div class="foot-sec2-information">
+                    <h5>Information</h5>
+                    <p>About Us</p>
+                    <p>Information</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                </div>
+                <div class="foot-sec2-services">
+                    <h5>Services</h5>
+                    <p>About Us</p>
+                    <p>Information</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                </div>
+                <div class="foot-sec2-extras">
+                    <h5>Extras</h5>
+                    <p>About Us</p>
+                    <p>Information</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                </div>
+                <div class="foot-sec2-myaccount">
+                    <h5>My Account</h5>
+                    <p>About Us</p>
+                    <p>Information</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                </div>
+                <div class="foot-sec2-usefullinks">
+                    <h5>Useful Links</h5>
+                    <p>About Us</p>
+                    <p>Information</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                </div>
+                <div class="foot-sec2-ouroffers">
+                    <h5>Our Offers</h5>
+                    <p>About Us</p>
+                    <p>Information</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                </div>  
+            </section>
+        </div>
+            <hr>
+            <div class="container">
+                <section class="foot-sec3">
+                    <span class="foot-sec3-copyright">© 2018 Ecommerce theme by www.bisenbaev.com</span>
+                    <figure class="foot-sec3-paymentIcon">
+                    <img src="Frontend-final-exercise/Western-union.png" alt="">
+                    <img src="Frontend-final-exercise/Group 19.png" alt="">
+                    <img src="Frontend-final-exercise/Paypal.png" alt="">
+                    <img src="Frontend-final-exercise/visa.jpg" alt="">
+                    </figure>
+                </section>
+            </div>  
+        </footer>
 
+<<<<<<< HEAD:pages/page10.html
     <script src="/css/sample.js"></script>
     <script src="/js/products.js"></script>
+=======
+    <!--<script src="css/sample.js"></script>-->
+    <script src="js/products.js"></script>
+>>>>>>> a50a89ca767428919b567504cfb0559febb34801:page10.html
 </body>
 </html>

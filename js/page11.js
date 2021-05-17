@@ -7,6 +7,26 @@ let price = document.querySelectorAll('.price');
 let unitPrice = document.querySelectorAll('.unit-price');
 let unitPriceHidden = document.querySelectorAll('.unit-price-hidden');
 
+let counter = (sessionStorage.getItem("items") != 0)? sessionStorage.getItem("items"): 0;
+let basket = document.querySelectorAll(".header__account--item span")[1];
+let totalPriceText = document.querySelector(".header__account--item small");
+basket.innerText = (sessionStorage.getItem("items")=== null)? `0 Items` : `${sessionStorage.getItem("items")} Items`;
+totalPriceText.innerText = (sessionStorage.getItem("total")=== null)? `$0.00` : `$${sessionStorage.getItem("total")}.00`;
+
+sessionStorage.setItem("item-list",(sessionStorage.getItem("item-list") === null)? JSON.stringify([0,0]): sessionStorage.getItem("item-list"));
+
+let itemList = (sessionStorage.getItem("item-list") != null)? sessionStorage.getItem("item-list"): 0;
+itemList = JSON.parse(itemList);
+
+itemList.forEach((elem,index) => {
+    quantityInput[index].value = elem;
+    unitPriceHidden[index].value = quantityInput[index].value * price[index].value;
+    unitPrice[index].innerText = `$${quantityInput[index].value * price[index].value}`;
+    calculateTotal();
+});
+
+
+
 function calculateTotal(){
     let subtotal = document.querySelector('.sub-total');
     let totalPrice = document.querySelector('.total-price');
@@ -16,6 +36,8 @@ function calculateTotal(){
     });
     subtotal.innerText = `$${subtotalVal}`;
     totalPrice.innerText = `$${subtotalVal + 20}`;
+    sessionStorage.setItem("total",subtotalVal + 20);
+    totalPriceText.innerText = (sessionStorage.getItem("total")=== null)? `$0.00` : `$${sessionStorage.getItem("total")}.00`;
 }
 
 upQuantity.forEach((elem, index) => {
@@ -25,18 +47,47 @@ upQuantity.forEach((elem, index) => {
         unitPrice[index].innerText = `$${(quantityInput[index].value * price[index].value)}`; 
         unitPriceHidden[index].value = (quantityInput[index].value * price[index].value);
         calculateTotal();
+        counter++;
+        sessionStorage.setItem("items",counter);
+        basket.innerText = `${sessionStorage.getItem("items")} Items`;
+        itemList[index]+=1;
+        sessionStorage.setItem("item-list",JSON.stringify(itemList));
     });
 });
 
 downQuantity.forEach((elem, index) => {
     elem.addEventListener("click", (e)=>{
         e.preventDefault();
-        if(quantityInput[index].value > 0)
+        if(quantityInput[index].value > 0){
             quantityInput[index].value--;
-            unitPrice[index].innerText = `$${(quantityInput[index].value * price[index].value)}`; 
+            unitPrice[index].innerText = `$${(quantityInput[index].value * price[index].value)}`;
+            unitPriceHidden[index].value = (quantityInput[index].value * price[index].value); 
             calculateTotal();
+            counter--;
+            sessionStorage.setItem("items",counter);
+            basket.innerText = `${sessionStorage.getItem("items")} Items`;
+            itemList[index]-=1;
+            sessionStorage.setItem("item-list",JSON.stringify(itemList));
+            
+        }
+            
     });
 });
+
+let navigationLinksProductText = document.querySelectorAll(".navigation__links span")[2];
+let colorTextNavigationLink;
+let colorselected = (sessionStorage.getItem("item-image") === null)? -1: sessionStorage.getItem("color");
+if(colorselected!= -1){
+    switch(parseInt(sessionStorage.getItem("item-index"))){
+        case 0: colorTextNavigationLink = "Pink";break; 
+        case 1: colorTextNavigationLink = "Red";break; 
+        case 2: colorTextNavigationLink = "Black";break; 
+        case 3: colorTextNavigationLink = "White";break; 
+        case 4: colorTextNavigationLink = "Brown";break; 
+    }
+    navigationLinksProductText.innerText = `Beat Solo2 on Ear Headphones - ${colorTextNavigationLink}`;
+}
+
 
 let itemDelete = document.querySelectorAll('.items-list__item--name__delete');
 
