@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-
-let image = document.querySelector(".items-left-details--productImages--largeView img");
-
-let colors = document.querySelectorAll(".color-option");
-
-colors.forEach( (elem,index)=>{
-    elem.addEventListener("click", ()=>{
-        let color;
-        switch(index){
-            case 0: color = "#2078f9";break;
-            case 1: color = "#f83f38";break;
-            case 2: color = "#171717";break;
-            case 3: color = "#fce83e";break;
-        }
-        image.style.background = color;
-    }); 
-});
-
-let heart = document.querySelector(".buttonCartheart-heart");
-
-heart.addEventListener("click",()=>{
-    if(heart.style.color == "red"){
-        heart.style.color = "#33A0FF";
-    }else{
-        heart.style.color = "red";
-    }
-    
-=======
 let image = document.querySelector(".items-left-details--productImages--largeView img");
 let colors = document.querySelectorAll(".color-option");
 let size = (sessionStorage.getItem("size") === null)? -1: sessionStorage.getItem("size");
@@ -146,5 +117,26 @@ document.querySelector(".numOrder--add").addEventListener("click", ()=>{
     value.value++;
     quantity.innerText = value.value;
     sessionStorage.setItem("product_quantity",value.value);
->>>>>>> a50a89ca767428919b567504cfb0559febb34801
+});
+
+// add to cart
+
+document.querySelector(".buttonCartheart-add").addEventListener("click", ()=>{
+    if(sessionStorage.getItem("add-items")===null){
+        
+        let item = {
+            itemName: productName.innerText,
+            quantity: sessionStorage.getItem("product_quantity"),
+            image: (sessionStorage.getItem("item-image")!=null)? sessionStorage.getItem("item-image"):"assets/beats/beats__3.png",
+            price: 499
+        }
+        let array = [];
+        array.push(item);
+        if(item.quantity!=null){
+            sessionStorage.setItem("add-items",JSON.stringify(array));
+            sessionStorage.setItem("items", (sessionStorage.getItem("items")!= null)? parseInt(sessionStorage.getItem("items") + item.quantity): item.quantity);
+            document.querySelectorAll(".header__account--item span")[1].innerText = `$${sessionStorage.getItem("items")} Items`;
+            document.querySelector(".header__account--item small").innerText = `$${(item.price * item.quantity) + 20}.00`;
+        }
+    }
 });

@@ -1,4 +1,100 @@
 
+//add products to checkout
+
+let array = JSON.parse(sessionStorage.getItem("add-items"));
+
+if(array!= null){
+    array.forEach((elem,index) => {
+        let section = document.createElement("section");
+        section.className = "items-list__item";
+
+        let name = document.createElement("section");
+        name.className = "items-list__item--name";
+        let deletesection = document.createElement("section");
+
+        let h1name = document.createElement("h1");
+        h1name.innerText = elem.itemName;
+
+        deletesection.className = "items-list__item--name__delete";
+        let deleteBtn = document.createElement("i");
+        deleteBtn.className = "fas fa-times";
+        let deleteBtnBackground = document.createElement("span");
+        deleteBtnBackground.className = "background";
+        deletesection.appendChild(deleteBtn);
+        deletesection.appendChild(deleteBtnBackground);
+
+        let imagecontainer = document.createElement("section");
+        imagecontainer.className = "image-container";
+        let image = document.createElement("img");
+        image.setAttribute("src",elem.image);
+        imagecontainer.appendChild(image);
+
+        let h1price = document.createElement("h1");
+        h1price.innerText = `$${elem.price}`;
+
+        let hiddeninput = document.createElement("input");
+        hiddeninput.setAttribute("type","hidden");
+        hiddeninput.setAttribute("value", elem.price);
+        hiddeninput.className = "price";
+
+        let quantity = document.createElement("section");
+        quantity.className = "items-list__item--quantity";
+
+        let form = document.createElement("form");
+        let minusbtn = document.createElement("button");
+        let minusbtnIcon = document.createElement("i");
+        minusbtn.className = "minus-quantity";
+        minusbtnIcon.className = "fa fa-minus";
+        minusbtn.appendChild(minusbtnIcon);
+        
+        let quantityinput = document.createElement("input");
+        quantityinput.setAttribute("type", "number");
+        quantityinput.setAttribute("min", 0);
+        quantityinput.setAttribute("max", 1);
+        quantityinput.value = elem.quantity;
+        quantityinput.className = "quantity";
+        let plusbtn = document.createElement("button");
+        let plusbtnIcon = document.createElement("i");
+        plusbtn.className = "add-quantity";
+        plusbtnIcon.className = "fa fa-plus";
+        plusbtn.appendChild(plusbtnIcon);
+        
+        form.appendChild(minusbtn);
+        form.appendChild(quantityinput);
+        form.appendChild(plusbtn);
+        quantity.appendChild(form);
+
+        let inputhiddenvalue = document.createElement("input");
+        inputhiddenvalue.className = "unit-price-hidden";
+        inputhiddenvalue.setAttribute("type","hidden");
+        inputhiddenvalue.value = elem.price * elem.quantity;
+
+        let h1unitprice = document.createElement("h1");
+        h1unitprice.className = "unit-price";
+        h1unitprice.innerText = `$${elem.price * elem.quantity}`;
+
+        name.appendChild(deletesection);
+        name.appendChild(imagecontainer);
+        name.append(h1name);
+        section.appendChild(name);
+        section.appendChild(h1price);
+        section.appendChild(hiddeninput);
+        section.appendChild(quantity);
+        section.appendChild(inputhiddenvalue);
+        section.appendChild(h1unitprice);
+        
+
+        let hr = document.createElement("hr");
+        document.querySelector(".items-list").appendChild(hr);
+        document.querySelector(".items-list").appendChild(section);
+    });
+}
+
+
+
+
+//js
+
 let quantityInput = document.querySelectorAll('.quantity');
 let upQuantity = document.querySelectorAll('.add-quantity');
 let downQuantity = document.querySelectorAll('.minus-quantity');
@@ -13,7 +109,14 @@ let totalPriceText = document.querySelector(".header__account--item small");
 basket.innerText = (sessionStorage.getItem("items")=== null)? `0 Items` : `${sessionStorage.getItem("items")} Items`;
 totalPriceText.innerText = (sessionStorage.getItem("total")=== null)? `$0.00` : `$${sessionStorage.getItem("total")}.00`;
 
-sessionStorage.setItem("item-list",(sessionStorage.getItem("item-list") === null)? JSON.stringify([0,0]): sessionStorage.getItem("item-list"));
+let itemsListItem = document.querySelectorAll(".items-list__item");
+let itemsArray = [];
+
+itemsListItem.forEach((elem,index)=>{
+    itemsArray.push((quantityInput[index].value == 0)? 0 : parseInt(quantityInput[index].value));
+});
+
+sessionStorage.setItem("item-list",(sessionStorage.getItem("item-list") === null)? JSON.stringify(itemsArray): sessionStorage.getItem("item-list"));
 
 let itemList = (sessionStorage.getItem("item-list") != null)? sessionStorage.getItem("item-list"): 0;
 itemList = JSON.parse(itemList);
@@ -39,6 +142,7 @@ function calculateTotal(){
     sessionStorage.setItem("total",subtotalVal + 20);
     totalPriceText.innerText = (sessionStorage.getItem("total")=== null)? `$0.00` : `$${sessionStorage.getItem("total")}.00`;
 }
+
 
 upQuantity.forEach((elem, index) => {
     elem.addEventListener("click", (e)=>{
