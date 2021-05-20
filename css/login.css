@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-container--background {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 50%;
+  position: absolute;
+  z-index: 2;
+}
+
+.container-background {
+  background-image: url("../assets/login_signup/cover-img.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: 100% 100%;
+  opacity: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.login-container {
+  display: flex;
+  position: relative;
+  z-index: 3;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+.login-container--text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container--text__text-container a {
+  color: white;
+  text-decoration: none;
+}
+.login-container--text__text-container--title {
+  display: flex;
+}
+.login-container--text__text-container--title h1 {
+  font-weight: bold;
+  font-size: 36px;
+}
+.login-container--text__text-container--title h1:nth-child(1) {
+  padding-bottom: 20px;
+  border-bottom: 7px solid #B2002D;
+  margin-bottom: 20px;
+}
+.login-container--text__text-container--title h1:nth-child(2) {
+  color: #FD2E2E;
+}
+.login-container__login {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-container__login--card {
+  color: black;
+  width: 368px;
+  height: 646px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.login-container__login--card .login__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-content: center;
+}
+.login-container__login--card .login__form .terms {
+  margin: auto;
+  width: 80%;
+  font-size: 12px;
+  height: 28px;
+  width: 196px;
+  text-align: center;
+}
+.login-container__login--card .login__form .signup {
+  font-size: 13px;
+  margin: auto;
+}
+.login-container__login--card .login__form .signup a {
+  color: #B2002D;
+  text-decoration: none;
+}
+.login-container__login--card .login__form form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.login-container__login--card .login__form form label {
+  font-weight: bold;
+}
+.login-container__login--card .login__form form input {
+  border: 1px solid #C4C4C4;
+  height: 48px;
+  border-radius: 8px;
+  padding: 10px;
+}
+.login-container__login--card .login__form form input[type=submit] {
+  background-color: #FD2E2E;
+  color: white;
+}
+.login-container__login--card .login__form form .show-password {
+  background: none;
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  bottom: 15px;
+}
+.login-container__login--card .separator {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.login-container__login--card .separator hr {
+  background-color: grey;
+}
+.login-container__login--card .separator span {
+  position: absolute;
+  top: -7px;
+  background: white;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+.login-container__login--card h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.login-container__login--card button {
+  border-radius: 6px;
+  height: 48px;
+  outline: none;
+  border: 1px solid grey;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.login-container__login--card button i {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.login-container__login--card button i img {
+  width: 22px;
+  height: 22px;
+}
+.login-container__login--card button span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  flex: 3;
+  display: flex;
+}
+.login-container__login--card button:nth-child(2) {
+  background-color: #000000;
+}
+.login-container__login--card button:nth-child(3) {
+  background-color: #3A5998;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.input-group:nth-child(4) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.input-group:nth-child(4) input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
+
+.login-container__login--card .existing-account--text a {
+  color: #233975;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=login.css.map */

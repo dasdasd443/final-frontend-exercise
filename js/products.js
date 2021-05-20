@@ -118,3 +118,25 @@ document.querySelector(".numOrder--add").addEventListener("click", ()=>{
     quantity.innerText = value.value;
     sessionStorage.setItem("product_quantity",value.value);
 });
+
+// add to cart
+
+document.querySelector(".buttonCartheart-add").addEventListener("click", ()=>{
+    if(sessionStorage.getItem("add-items")===null){
+        
+        let item = {
+            itemName: productName.innerText,
+            quantity: sessionStorage.getItem("product_quantity"),
+            image: (sessionStorage.getItem("item-image")!=null)? sessionStorage.getItem("item-image"):"assets/beats/beats__3.png",
+            price: 499
+        }
+        let array = [];
+        array.push(item);
+        if(item.quantity!=null){
+            sessionStorage.setItem("add-items",JSON.stringify(array));
+            sessionStorage.setItem("items", (sessionStorage.getItem("items")!= null)? parseInt(sessionStorage.getItem("items") + item.quantity): item.quantity);
+            document.querySelectorAll(".header__account--item span")[1].innerText = `$${sessionStorage.getItem("items")} Items`;
+            document.querySelector(".header__account--item small").innerText = `$${(item.price * item.quantity) + 20}.00`;
+        }
+    }
+});
