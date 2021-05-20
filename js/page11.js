@@ -207,3 +207,38 @@ itemDelete.forEach((elem,index)=>{
         calculateTotal();
     });
 });
+
+////// checkout button
+
+document.querySelector(".checkout-button").addEventListener("click", (e)=>{
+    e.preventDefault();
+    let items = document.querySelectorAll(".item-name");
+
+    let array = [];
+    
+
+    if(localStorage.getItem("orders")==null){
+        items.forEach((elem,index) => {
+            let object = {
+                itemname: elem.innerText,
+                price: price[index].value,
+                totalPrice: unitPriceHidden[index].value,
+                quantity: quantityInput[index].value
+            }
+            array.push(object);
+        });
+        localStorage.setItem("orders", JSON.stringify(array));
+    }else{
+        let x = JSON.parse(localStorage.getItem("orders"));
+        items.forEach((elem,index) => {
+            let object = {
+                itemname: elem.innerText,
+                price: price[index].value,
+                totalPrice: unitPriceHidden[index].value,
+                quantity: quantityInput[index].value
+            }
+            x.push(object);
+        });
+        localStorage.setItem("orders", JSON.stringify(x));
+    }
+});

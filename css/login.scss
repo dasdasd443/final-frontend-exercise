@@ -172,13 +172,43 @@
                 flex:3;
                 display:flex;
             }
-            button:nth-child(2){
+            button:nth-child(3){
                 background-color:#000000;
             }
-            button:nth-child(3){
+            button:nth-child(4){
                 background-color:#3A5998;
             }
         }
+    }
+}
+
+@media screen and(max-width:808px){
+    .login-container--background{
+        display:none;
+    }
+    .login-container--text__text-container{
+        display:none;
+    }
+    .container-background{
+        display:none;
+    }
+    .login-container--text{
+        flex:0;
+    }
+    .login-container__login{
+        margin:auto;
+        &--card{
+            margin: auto;
+            justify-content: center;
+            position: relative!important;
+        }
+    }
+    .arrow-container{
+        width:100%;
+    }
+    .backarrow{
+        display: flex !important;
+        
     }
 }
 
