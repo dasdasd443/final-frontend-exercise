@@ -36,17 +36,20 @@
                 <section class="login__form">
                     <form action="">
                         <div class="input-group">
-                            <label for="fullname">Full Name</label>
-                            <input type="text" id="fullname">
+                            <label for="fullname">Full Name <span id="fullname-error" class='error'></span></label>
+                            <input type="text" id="fullname" required>
+                            
                         </div>
                         <div class="input-group">
-                            <label for="email">Email</label>
-                            <input type="text" id="email">
+                            <label for="email">Email <span id="email-error" class='error'></span></label>
+                            <input type="text" id="email" required class='error'>
+                            
                         </div>
                         <div class="input-group">
-                            <label for="password">Password</label>
-                            <input type="password" id='password' placeholder="Must be at least 6 characters">
+                            <label for="password">Password <span id="password-error" class='error'></span></label>
+                            <input type="password" id='password' placeholder="Must be at least 6 characters" required class='error'>
                             <i class="fas fa-eye show-password"></i>
+                                 
                         </div>
                         <div class='input-group'>
                             <input type="checkbox" id="email">
